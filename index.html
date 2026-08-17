@@ -9,19 +9,21 @@
   <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg-color: #060D0A;
-      --surface-color: #0C1A14;
-      --surface-elevated: #12241C;
-      --border-color: rgba(52, 211, 153, 0.18);
-      --border-strong: rgba(52, 211, 153, 0.4);
-      --primary-color: #10B981;
-      --primary-bright: #34D399;
-      --primary-glow: rgba(16, 185, 129, 0.25);
-      --text-main: #F3F4F6;
-      --text-muted: #9CA3AF;
-      --text-sub: #6EE7B7;
-      --danger-color: #EF4444;
-      --danger-bg: rgba(239, 68, 68, 0.1);
+      --bg-color: #F8FAFC;
+      --surface-color: #FFFFFF;
+      --border-color: #E2E8F0;
+      --border-strong: #CBD5E1;
+      --primary-color: #059669;
+      --primary-subtle: #ECFDF5;
+      --text-main: #0F172A;
+      --text-body: #334155;
+      --text-muted: #64748B;
+      --danger-bg: #FEF2F2;
+      --danger-border: #FECACA;
+      --danger-text: #DC2626;
+      --success-bg: #F0FDF4;
+      --success-border: #BBF7D0;
+      --success-text: #16A34A;
     }
 
     * {
@@ -33,135 +35,124 @@
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       background-color: var(--bg-color);
-      color: var(--text-main);
+      color: var(--text-body);
       line-height: 1.7;
       padding: 40px 20px 80px;
       -webkit-font-smoothing: antialiased;
     }
 
     .wrapper {
-      max-width: 880px;
+      max-width: 860px;
       margin: 0 auto;
     }
 
-    /* Header & Brand */
+    /* Header */
     header {
-      background: linear-gradient(180deg, var(--surface-elevated) 0%, var(--surface-color) 100%);
-      border: 1px solid var(--border-strong);
-      border-radius: 24px;
-      padding: 40px 32px;
-      margin-bottom: 32px;
-      position: relative;
-      overflow: hidden;
-      box-shadow: 0 12px 32px var(--primary-glow);
+      background: var(--surface-color);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 36px 32px;
+      margin-bottom: 28px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
     }
 
     .brand-badge {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      background: rgba(16, 185, 129, 0.15);
-      border: 1px solid var(--primary-bright);
-      padding: 6px 14px;
+      gap: 6px;
+      background: var(--primary-subtle);
+      border: 1px solid var(--success-border);
+      padding: 4px 12px;
       border-radius: 999px;
       font-size: 12px;
       font-weight: 600;
-      color: var(--primary-bright);
+      color: var(--primary-color);
       letter-spacing: 0.5px;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
       text-transform: uppercase;
-    }
-
-    .kanji-emblem {
-      font-family: 'Archivo Black', sans-serif;
-      font-size: 14px;
-      color: var(--primary-bright);
     }
 
     h1 {
       font-family: 'Archivo Black', sans-serif;
-      font-size: 32px;
+      font-size: 28px;
+      color: var(--text-main);
+      margin-bottom: 8px;
       letter-spacing: -0.5px;
-      color: #FFFFFF;
-      margin-bottom: 12px;
-      text-transform: uppercase;
+    }
+
+    .subtitle {
+      color: var(--text-muted);
+      font-size: 15px;
+      margin-bottom: 18px;
     }
 
     .meta-bar {
       display: flex;
       flex-wrap: wrap;
-      gap: 20px;
+      gap: 18px;
       font-size: 13px;
       color: var(--text-muted);
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      border-top: 1px solid var(--border-color);
       padding-top: 16px;
-      margin-top: 16px;
     }
 
     .meta-bar strong {
       color: var(--text-main);
+      font-weight: 600;
     }
 
-    /* Highlight Guarantee Card */
+    /* Guarantee Box */
     .guarantee-box {
-      background: rgba(16, 185, 129, 0.08);
-      border: 1.5px solid var(--primary-color);
-      border-radius: 16px;
-      padding: 24px;
-      margin-bottom: 32px;
+      background: var(--success-bg);
+      border: 1px solid var(--success-border);
+      border-radius: 14px;
+      padding: 22px 24px;
+      margin-bottom: 28px;
       display: flex;
       gap: 16px;
       align-items: flex-start;
     }
 
     .guarantee-icon {
-      font-size: 28px;
+      font-size: 24px;
       line-height: 1;
     }
 
     .guarantee-title {
-      font-family: 'Archivo Black', sans-serif;
-      font-size: 16px;
-      color: var(--primary-bright);
-      margin-bottom: 6px;
-      letter-spacing: 0.2px;
+      font-weight: 700;
+      font-size: 15px;
+      color: var(--success-text);
+      margin-bottom: 4px;
     }
 
     .guarantee-text {
       font-size: 14px;
-      color: var(--text-muted);
+      color: #1E293B;
       line-height: 1.6;
     }
 
-    /* Main Content Sections */
+    /* Section Cards */
     .content-card {
       background: var(--surface-color);
       border: 1px solid var(--border-color);
-      border-radius: 20px;
-      padding: 36px 32px;
-      margin-bottom: 24px;
+      border-radius: 16px;
+      padding: 32px;
+      margin-bottom: 22px;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
     }
 
     h2 {
       font-family: 'Archivo Black', sans-serif;
-      font-size: 20px;
-      color: var(--primary-bright);
-      margin-bottom: 16px;
+      font-size: 18px;
+      color: var(--text-main);
+      margin-bottom: 14px;
       display: flex;
       align-items: center;
-      gap: 10px;
-      letter-spacing: 0.3px;
-    }
-
-    h3 {
-      font-size: 16px;
-      font-weight: 600;
-      color: #FFFFFF;
-      margin: 20px 0 8px;
+      gap: 8px;
     }
 
     p {
-      color: var(--text-muted);
+      color: var(--text-body);
       font-size: 15px;
       margin-bottom: 14px;
     }
@@ -173,20 +164,21 @@
     }
 
     li {
-      color: var(--text-muted);
+      color: var(--text-body);
       font-size: 14.5px;
-      padding-left: 24px;
+      padding-left: 20px;
       position: relative;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
     li::before {
-      content: "✦";
+      content: "•";
       position: absolute;
-      left: 0;
+      left: 4px;
       color: var(--primary-color);
-      font-size: 12px;
-      top: 2px;
+      font-size: 18px;
+      line-height: 1;
+      top: -1px;
     }
 
     strong {
@@ -194,12 +186,22 @@
       font-weight: 600;
     }
 
+    a {
+      color: var(--primary-color);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    a:hover {
+      color: #047857;
+    }
+
     /* Data Table */
     .table-responsive {
       overflow-x: auto;
-      margin: 18px 0;
-      border-radius: 12px;
-      border: 1px solid rgba(255, 255, 255, 0.08);
+      margin: 16px 0;
+      border-radius: 10px;
+      border: 1px solid var(--border-color);
     }
 
     table {
@@ -210,8 +212,8 @@
     }
 
     th {
-      background: var(--surface-elevated);
-      color: var(--primary-bright);
+      background: #F1F5F9;
+      color: var(--text-main);
       font-weight: 600;
       padding: 12px 16px;
       border-bottom: 1px solid var(--border-color);
@@ -219,53 +221,83 @@
 
     td {
       padding: 12px 16px;
-      color: var(--text-muted);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      color: var(--text-body);
+      border-bottom: 1px solid var(--border-color);
     }
 
     tr:last-child td {
       border-bottom: none;
     }
 
-    /* Danger / Account Deletion Callout */
+    /* Deletion Callout */
     .deletion-box {
       background: var(--danger-bg);
-      border: 1.5px solid var(--danger-color);
-      border-radius: 16px;
-      padding: 24px;
-      margin: 20px 0;
+      border: 1px solid var(--danger-border);
+      border-radius: 12px;
+      padding: 20px;
+      margin: 18px 0;
     }
 
     .deletion-title {
-      font-family: 'Archivo Black', sans-serif;
+      font-weight: 700;
       font-size: 15px;
-      color: var(--danger-color);
+      color: var(--danger-text);
       margin-bottom: 8px;
+    }
+
+    .deletion-box p {
+      color: #7F1D1D;
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+
+    .deletion-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Disclaimer Box */
+    .disclaimer-box {
+      background: #FFFBEB;
+      border-left: 4px solid #F59E0B;
+      padding: 16px 20px;
+      border-radius: 8px;
+      margin: 14px 0;
+    }
+
+    .disclaimer-title {
+      font-weight: 700;
+      color: #B45309;
+      margin-bottom: 4px;
+      font-size: 14px;
+    }
+
+    .disclaimer-box p {
+      color: #92400E;
+      font-size: 13.5px;
+      margin-bottom: 0;
     }
 
     footer {
       text-align: center;
       font-size: 13px;
-      color: #6B7280;
-      margin-top: 40px;
-      padding-top: 24px;
-      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      color: var(--text-muted);
+      margin-top: 36px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border-color);
     }
 
     @media (max-width: 640px) {
       body {
-        padding: 20px 12px 60px;
+        padding: 20px 14px 50px;
       }
       header {
-        padding: 28px 20px;
-        border-radius: 18px;
+        padding: 24px 18px;
       }
       h1 {
-        font-size: 24px;
+        font-size: 22px;
       }
       .content-card {
-        padding: 24px 18px;
-        border-radius: 16px;
+        padding: 22px 16px;
       }
     }
   </style>
@@ -275,10 +307,10 @@
     <!-- Header -->
     <header>
       <div class="brand-badge">
-        <span class="kanji-emblem">滅</span> Official Privacy Policy
+        Official Privacy Policy
       </div>
       <h1>RAIZEN — Data Privacy & User Rights</h1>
-      <p style="color: var(--text-sub); font-size: 15px;">Forged for relentless strength, discipline, and uncompromising user data protection.</p>
+      <p class="subtitle">Official Privacy Policy for RAIZEN Mobile Fitness & Mindfulness Application</p>
       
       <div class="meta-bar">
         <div><strong>Application:</strong> RAIZEN (Dawn Corps Edition)</div>
@@ -293,7 +325,7 @@
     <div class="guarantee-box">
       <div class="guarantee-icon">🛡️</div>
       <div>
-        <div class="guarantee-title">Our Ironclad Privacy Commitment</div>
+        <div class="guarantee-title">Our Privacy Commitment</div>
         <div class="guarantee-text">
           <strong>RAIZEN operates on a local-first, privacy-by-design architecture.</strong> We do not sell, rent, monetize, or disclose your biometric, fitness, or personal information to third-party advertising networks, data aggregators, or brokers. Your data is used exclusively to power your workouts and rank progression.
         </div>
@@ -302,7 +334,7 @@
 
     <!-- Section 1: Overview -->
     <section class="content-card">
-      <h2><span>1.</span> Overview & Legal Scope</h2>
+      <h2>1. Overview & Legal Scope</h2>
       <p>
         This Privacy Policy explains how <strong>The Progress Labs</strong> ("we", "us", or "our") collects, uses, stores, and protects your information when you use the <strong>RAIZEN</strong> mobile application available on Google Play.
       </p>
@@ -313,7 +345,7 @@
 
     <!-- Section 2: Data Collection -->
     <section class="content-card">
-      <h2><span>2.</span> Information We Collect</h2>
+      <h2>2. Information We Collect</h2>
       <p>We collect only the minimum necessary data points required to generate personalized calisthenic workouts and synchronize your progress:</p>
 
       <div class="table-responsive">
@@ -358,7 +390,7 @@
 
     <!-- Section 3: Data Security -->
     <section class="content-card">
-      <h2><span>3.</span> Data Security & Encryption</h2>
+      <h2>3. Data Security & Encryption</h2>
       <p>We implement multi-layered industry-standard technical safeguards:</p>
       <ul>
         <li><strong>In Transit:</strong> All data transmitted between the RAIZEN app and our cloud servers is encrypted using modern <strong>Transport Layer Security (TLS 1.3 / HTTPS)</strong>.</li>
@@ -370,18 +402,18 @@
 
     <!-- Section 4: Account Deletion & Right to Erasure -->
     <section class="content-card">
-      <h2><span>4.</span> Account Deletion & Right to Erasure (Google Play Mandate)</h2>
+      <h2>4. Account Deletion & Right to Erasure (Google Play Mandate)</h2>
       <p>
         In accordance with the <strong>Google Play User Data Policy</strong> and <strong>GDPR Article 17</strong>, you retain the permanent right to delete your entire account and all associated cloud and local data at any time.
       </p>
 
       <div class="deletion-box">
         <div class="deletion-title">🗑️ How to Permanently Delete Your Data:</div>
-        <p style="color: #FCA5A5; margin-bottom: 8px;"><strong>Method 1 (Instant In-App Deletion):</strong></p>
-        <p style="color: #F3F4F6; margin-bottom: 12px;">Open RAIZEN &rarr; Navigate to <strong>Profile</strong> &rarr; Scroll to <strong>Account & Data Deletion</strong> &rarr; Tap <strong>Delete Account & Wipe Cloud Data</strong>.</p>
+        <p><strong>Method 1 (Instant In-App Deletion):</strong></p>
+        <p>Open RAIZEN &rarr; Navigate to <strong>Profile</strong> &rarr; Scroll to <strong>Account & Data Deletion</strong> &rarr; Tap <strong>Delete Account & Wipe Cloud Data</strong>.</p>
         
-        <p style="color: #FCA5A5; margin-bottom: 8px;"><strong>Method 2 (Web / Remote Deletion Request):</strong></p>
-        <p style="color: #F3F4F6; margin-bottom: 0;">If you have uninstalled the app, email <a href="mailto:theprogresslabs.com@gmail.com" style="color: #34D399; font-weight: 600;">theprogresslabs.com@gmail.com</a> with the subject <em>"Account Deletion Request"</em> from your registered email. All cloud records will be permanently purged within 72 hours.</p>
+        <p style="margin-top: 8px;"><strong>Method 2 (Web / Remote Deletion Request):</strong></p>
+        <p>If you have uninstalled the app, email <a href="mailto:theprogresslabs.com@gmail.com" style="color: #DC2626; font-weight: 600;">theprogresslabs.com@gmail.com</a> with the subject <em>"Account Deletion Request"</em> from your registered email. All cloud records will be permanently purged within 72 hours.</p>
       </div>
 
       <p>
@@ -391,17 +423,17 @@
 
     <!-- Section 5: Third-Party Services -->
     <section class="content-card">
-      <h2><span>5.</span> Third-Party Service Providers</h2>
+      <h2>5. Third-Party Service Providers</h2>
       <p>We do not use advertising SDKs or third-party behavioral analytics. We only rely on trusted cloud infrastructure partners:</p>
       <ul>
-        <li><strong>Supabase:</strong> Cloud database, authentication, and secure API infrastructure. (<a href="https://supabase.com/privacy" target="_blank" style="color: var(--primary-bright);">Supabase Privacy Policy</a>)</li>
-        <li><strong>Expo / EAS:</strong> Application build runtime and update distribution. (<a href="https://expo.dev/privacy" target="_blank" style="color: var(--primary-bright);">Expo Privacy Policy</a>)</li>
+        <li><strong>Supabase:</strong> Cloud database, authentication, and secure API infrastructure. (<a href="https://supabase.com/privacy" target="_blank">Supabase Privacy Policy</a>)</li>
+        <li><strong>Expo / EAS:</strong> Application build runtime and update distribution. (<a href="https://expo.dev/privacy" target="_blank">Expo Privacy Policy</a>)</li>
       </ul>
     </section>
 
     <!-- Section 6: Children's Privacy -->
     <section class="content-card">
-      <h2><span>6.</span> Children's Privacy (COPPA Compliance)</h2>
+      <h2>6. Children's Privacy (COPPA Compliance)</h2>
       <p>
         RAIZEN is intended for users who are at least <strong>13 years of age</strong>. We do not knowingly solicit or collect personal information from children under 13. If we discover that a child under 13 has provided personal data, we will take immediate steps to permanently delete that information from our servers.
       </p>
@@ -409,10 +441,10 @@
 
     <!-- Section 7: Medical Disclaimer -->
     <section class="content-card">
-      <h2><span>7.</span> Medical & Health Disclaimer</h2>
-      <div style="background: rgba(239, 68, 68, 0.08); border-left: 4px solid var(--danger-color); padding: 16px; border-radius: 8px; margin-bottom: 14px;">
-        <p style="color: #F87171; font-weight: 600; margin-bottom: 4px;">⚠️ Not Medical Advice</p>
-        <p style="color: var(--text-main); font-size: 14px; margin-bottom: 0;">
+      <h2>7. Medical & Health Disclaimer</h2>
+      <div class="disclaimer-box">
+        <div class="disclaimer-title">⚠️ Not Medical Advice</div>
+        <p>
           The exercises, workout routines, breathing guides, and nutritional calculators provided in RAIZEN are for educational and athletic conditioning purposes only. They do not constitute medical diagnosis, clinical advice, or treatment. Always consult a qualified physician or healthcare provider before undertaking any physical fitness regimen.
         </p>
       </div>
@@ -420,16 +452,15 @@
 
     <!-- Section 8: Contact -->
     <section class="content-card">
-      <h2><span>8.</span> Contact & Data Protection Officer</h2>
+      <h2>8. Contact & Data Protection Officer</h2>
       <p>If you have any questions regarding this Privacy Policy, your rights, or data protection practices, please contact us directly:</p>
       <p><strong>Developer Team:</strong> The Progress Labs</p>
-      <p><strong>Privacy & Support Email:</strong> <a href="mailto:theprogresslabs.com@gmail.com" style="color: var(--primary-bright); font-weight: 600;">theprogresslabs.com@gmail.com</a></p>
+      <p><strong>Privacy & Support Email:</strong> <a href="mailto:theprogresslabs.com@gmail.com" style="font-weight: 600;">theprogresslabs.com@gmail.com</a></p>
     </section>
 
     <!-- Footer -->
     <footer>
       <p>© 2026 The Progress Labs. All rights reserved. RAIZEN™ is a trademark of The Progress Labs.</p>
-      <p style="margin-top: 6px; font-size: 12px;">Forged with discipline • Protected with privacy</p>
     </footer>
   </div>
 </body>
